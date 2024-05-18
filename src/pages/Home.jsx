@@ -1,3 +1,4 @@
+import Accordion from "../components/home/Accordion";
 import Banner from "../components/home/Banner";
 import Products from "../components/home/Products";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Banner />
       <Products />
+      <Accordion />
     </div>
   );
 };
