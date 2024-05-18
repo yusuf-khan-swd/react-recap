@@ -1,13 +1,14 @@
 import "./App.css";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="container">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat omnis
-        error asperiores. Natus quas aliquid, rem quod nobis eveniet sed!
-      </p>
+    <div className="container mx-auto">
+      <Navbar />
+      <Home />
+      <Footer />
     </div>
   );
 }
