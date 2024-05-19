@@ -1,12 +1,10 @@
-import { getAuth, signInWithPopup } from "firebase/auth";
-import { GoogleAuthProvider } from "firebase/auth/cordova";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { createContext } from "react";
 import { app } from "../firebase/firebase.config";
 
 export const AuthContext = createContext(null);
 
 const auth = getAuth(app);
-
 // eslint-disable-next-line react/prop-types
 const AuthProvider = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
