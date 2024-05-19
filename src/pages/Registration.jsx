@@ -22,7 +22,7 @@ const Registration = () => {
 
   return (
     <form onSubmit={handleSUbmit} className="hero min-h-screen bg-base-200">
-      <div className="hero-content flex-col lg:flex-row-reverse">
+      <div className="hero-content flex-col lg:flex-row-reverse max-w-[1040px] mx-auto">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Register now!</h1>
           <p className="py-6">
