@@ -1,7 +1,12 @@
 import { FcGoogle } from "react-icons/fc";
+import useAuth from "../../hooks/useAuth";
 
 const GoogleLogin = () => {
-  const handleGoogleSignIn = () => {};
+  const { googleLogin } = useAuth();
+
+  const handleGoogleSignIn = () => {
+    googleLogin();
+  };
 
   return (
     <button onClick={handleGoogleSignIn} className="btn w-full">
