@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
 
 const Navbar = () => {
+  const { logout, user } = useAuth();
+
+  const handleLogout = async () => {
+    await logout();
+  };
+
   const menuItems = (
     <>
       <li>
@@ -56,6 +63,14 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{menuItems}</ul>
       </div>
       <div className="navbar-end">
+        {user && (
+          <button
+            onClick={handleLogout}
+            className="btn bg-red-500 text-white hidden lg:block"
+          >
+            Logout
+          </button>
+        )}
         <div className="avatar">
           <div className="w-12 rounded-full border-2">
             <img src={"/public/placeholder.jpg"} />
