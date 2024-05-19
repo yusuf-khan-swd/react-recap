@@ -16,12 +16,16 @@ const Navbar = () => {
       <li>
         <Link to="/about">About</Link>
       </li>
-      <li>
-        <Link to="/login">Login</Link>
-      </li>
-      <li>
-        <Link to="/register">Register</Link>
-      </li>
+      {!user && (
+        <>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+          <li>
+            <Link to="/register">Register</Link>
+          </li>
+        </>
+      )}
       <li>
         <Link to="/dashboard">Dashboard</Link>
       </li>
