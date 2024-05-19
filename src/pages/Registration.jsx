@@ -1,12 +1,17 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import GoogleLogin from "../components/Login-Registration/GoogleLogin";
 import useAuth from "../hooks/useAuth";
 
 const Registration = () => {
   const [passMatch, setPassMatch] = useState(true);
 
-  const { createUser } = useAuth();
+  const { createUser, user } = useAuth();
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location?.state?.from?.pathname || "/";
 
   const handleSUbmit = (e) => {
     e.preventDefault();
@@ -26,6 +31,10 @@ const Registration = () => {
       createUser(email, password);
     }
   };
+
+  useEffect(() => {
+    if (user) navigate(from, { replace: true });
+  }, [user, navigate, from]);
 
   return (
     <form onSubmit={handleSUbmit} className="hero min-h-screen bg-base-200">
