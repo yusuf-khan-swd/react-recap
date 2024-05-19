@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import GoogleLogin from "../components/Login-Registration/GoogleLogin";
+import useAuth from "../hooks/useAuth";
 
 const Registration = () => {
   const [passMatch, setPassMatch] = useState(true);
+
+  const { createUser } = useAuth();
 
   const handleSUbmit = (e) => {
     e.preventDefault();
@@ -18,6 +21,10 @@ const Registration = () => {
     }
 
     console.log(email, password, confirm_password);
+
+    if (password === confirm_password) {
+      createUser(email, password);
+    }
   };
 
   return (
