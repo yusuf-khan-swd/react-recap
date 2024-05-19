@@ -56,7 +56,11 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{menuItems}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <div className="avatar">
+          <div className="w-12 rounded-full border-2">
+            <img src={"/public/placeholder.jpg"} />
+          </div>
+        </div>
       </div>
     </div>
   );
