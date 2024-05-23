@@ -7,7 +7,7 @@ const Products = ({ shoes }) => {
       <h1 className="text-3xl font-bold text-center my-4">Our Products</h1>
 
       <div className="flex justify-center gap-2">
-        {shoes.map((shoe) => (
+        {shoes?.slice(0, 3).map((shoe) => (
           <SingleProduct key={shoe.id} shoe={shoe} />
         ))}
       </div>
