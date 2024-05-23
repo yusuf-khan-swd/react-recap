@@ -13,7 +13,7 @@ const AllProducts = () => {
   return (
     <div>
       <h1>All Products</h1>
-      <div className="flex justify-center flex-wrap gap-2">
+      <div className="flex justify-center flex-wrap gap-4">
         {shoes.map((shoe) => (
           <SingleProduct key={shoe.id} shoe={shoe} />
         ))}
