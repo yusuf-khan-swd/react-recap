@@ -2,8 +2,6 @@
 import SingleProduct from "./SingleProduct";
 
 const Products = ({ shoes }) => {
-  console.log(shoes);
-
   return (
     <div>
       <h1 className="text-3xl font-bold text-center my-4">Our Products</h1>
