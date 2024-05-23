@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 const SingleProduct = ({ shoe }) => {
-  const { title, brand, price, description, image_url } = shoe;
+  const { id, title, brand, price, description, image_url } = shoe;
 
   console.log(image_url);
 
@@ -20,7 +22,9 @@ const SingleProduct = ({ shoe }) => {
         <h3 className="text-xl font-semibold">Price: ${price}</h3>
         <p>Description: {description}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+          <Link to={`/products/${id}`}>
+            <button className="btn btn-primary">See More</button>
+          </Link>
         </div>
       </div>
     </div>
