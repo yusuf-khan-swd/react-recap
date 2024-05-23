@@ -3,9 +3,7 @@
 import { Link } from "react-router-dom";
 
 const SingleProduct = ({ shoe }) => {
-  const { id, title, brand, price, description, image_url } = shoe;
-
-  console.log(image_url);
+  const { id, title, brand, price, description } = shoe;
 
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
@@ -14,7 +12,6 @@ const SingleProduct = ({ shoe }) => {
           src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
           alt="Shoes"
         />
-        <img src={image_url} alt="Shoes" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
