@@ -6,6 +6,7 @@ import Dashboard from "../pages/Dashboard";
 import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
+import ProductDetails from "../pages/ProductDetails";
 import Registration from "../pages/Registration";
 import PrivateRoute from "./private/PrivateRoute";
 
@@ -23,6 +24,12 @@ export const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/products/:id",
+        element: <ProductDetails />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/shoes/${params?.id}`),
       },
       {
         path: "/login",
