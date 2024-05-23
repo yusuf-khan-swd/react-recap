@@ -1,6 +1,6 @@
-// eslint-disable-next-line react/prop-types
+/* eslint-disable react/prop-types */
+
 const SingleProduct = ({ shoe }) => {
-  // eslint-disable-next-line react/prop-types
   const { title, brand, price, description } = shoe;
 
   return (
