@@ -5,12 +5,11 @@ import Products from "../components/home/Products";
 
 const Home = () => {
   const shoes = useLoaderData();
-  console.log(shoes);
 
   return (
     <div>
       <Banner />
-      <Products />
+      <Products shoes={shoes} />
       <Accordion />
     </div>
   );
