@@ -10,7 +10,7 @@ const Products = ({ shoes }) => {
 
       <div className="flex justify-center gap-2">
         {shoes.map((shoe) => (
-          <SingleProduct key={shoe.id} />
+          <SingleProduct key={shoe.id} shoe={shoe} />
         ))}
       </div>
     </div>

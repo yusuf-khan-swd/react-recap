@@ -1,4 +1,8 @@
-const SingleProduct = () => {
+// eslint-disable-next-line react/prop-types
+const SingleProduct = ({ shoe }) => {
+  // eslint-disable-next-line react/prop-types
+  const { title, brand, price, description } = shoe;
+
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
@@ -8,8 +12,10 @@ const SingleProduct = () => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <h2 className="card-title">{title}</h2>
+        <h3 className="text-xl font-semibold">Brand: {brand}</h3>
+        <h3 className="text-xl font-semibold">Price: ${price}</h3>
+        <p>Description: {description}</p>
         <div className="card-actions justify-end">
           <button className="btn btn-primary">Buy Now</button>
         </div>
