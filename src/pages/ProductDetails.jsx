@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 const ProductDetails = () => {
   const shoe = useLoaderData();
 
-  const { brand, description, image_url, price, title } = shoe;
+  const { brand, description, price, title } = shoe;
 
   return (
     <div>
@@ -13,7 +13,6 @@ const ProductDetails = () => {
           src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
           alt="Shoes"
         />
-        <img src={image_url} alt="Shoes" />
       </figure>
 
       <h1 className="text-5xl text-center font-bold">{title}</h1>

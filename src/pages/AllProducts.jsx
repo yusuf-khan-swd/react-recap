@@ -13,8 +13,8 @@ const AllProducts = () => {
   return (
     <div>
       <h1>All Products</h1>
-      <div className="flex justify-center gap-2">
-        {shoes?.slice(0, 3).map((shoe) => (
+      <div className="flex justify-center flex-wrap gap-2">
+        {shoes.map((shoe) => (
           <SingleProduct key={shoe.id} shoe={shoe} />
         ))}
       </div>
