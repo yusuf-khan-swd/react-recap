@@ -79,7 +79,7 @@ const Navbar = () => {
         )}
         <div className="avatar">
           <div className="w-12 rounded-full border-2">
-            <img src={"/public/placeholder.jpg"} />
+            <img src={"/placeholder.jpg"} />
           </div>
         </div>
       </div>
