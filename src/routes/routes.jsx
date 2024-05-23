@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import DashboardLayout from "../layouts/DashboardLayout";
 import MainLayout from "../layouts/MainLayout";
 import About from "../pages/About";
+import AddProducts from "../pages/AddProducts";
 import AllProducts from "../pages/AllProducts";
 import Dashboard from "../pages/Dashboard";
 import ErrorPage from "../pages/ErrorPage";
@@ -60,6 +61,14 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <AllProducts />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "add-products",
+        element: (
+          <PrivateRoute>
+            <AddProducts />
           </PrivateRoute>
         ),
       },
