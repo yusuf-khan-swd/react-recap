@@ -22,8 +22,9 @@ const AddProducts = () => {
     });
 
     const resData = await res.json();
-
     console.log(resData);
+
+    form.reset();
   };
 
   return (
