@@ -5,7 +5,13 @@ import { Link } from "react-router-dom";
 const SingleProductDashboard = ({ shoe }) => {
   const { id, title, brand, price, description } = shoe;
 
-  const handleDelete = () => {};
+  const handleDelete = async () => {
+    const res = await fetch(`http://localhost:3000/shoes/${id}`, {
+      method: "DELETE",
+    });
+    const data = await res.json();
+    console.log(data);
+  };
 
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
