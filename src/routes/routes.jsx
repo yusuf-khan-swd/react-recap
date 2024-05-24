@@ -80,7 +80,8 @@ export const router = createBrowserRouter([
             <EditProduct />
           </PrivateRoute>
         ),
-        loader: ({ params }) => `http://localhost:3000/shoes/${params?.id}`,
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/shoes/${params?.id}`),
       },
     ],
   },
