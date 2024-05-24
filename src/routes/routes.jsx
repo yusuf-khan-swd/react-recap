@@ -5,6 +5,7 @@ import About from "../pages/About";
 import AddProducts from "../pages/AddProducts";
 import AllProducts from "../pages/AllProducts";
 import Dashboard from "../pages/Dashboard";
+import EditProduct from "../pages/EditProduct";
 import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
@@ -71,6 +72,15 @@ export const router = createBrowserRouter([
             <AddProducts />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "all-products/edit/:id",
+        element: (
+          <PrivateRoute>
+            <EditProduct />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) => `http://localhost:3000/shoes/${params?.id}`,
       },
     ],
   },
