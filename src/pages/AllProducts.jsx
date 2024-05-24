@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SingleProduct from "../components/SingleProduct";
+import SingleProductDashboard from "../components/dashboard/SingleProductDashboard";
 
 const AllProducts = () => {
   const [shoes, setShoes] = useState([]);
@@ -15,7 +15,7 @@ const AllProducts = () => {
       <h1 className="text-5xl font-bold text-center">All Products</h1>
       <div className="my-16 flex justify-center flex-wrap gap-4">
         {shoes.map((shoe) => (
-          <SingleProduct key={shoe.id} shoe={shoe} />
+          <SingleProductDashboard key={shoe.id} shoe={shoe} />
         ))}
       </div>
     </div>
