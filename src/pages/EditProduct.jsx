@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 
 const EditProduct = () => {
   const shoe = useLoaderData();
-  console.log(shoe);
+  console.log({ shoe });
+
+  const [title, setTitle] = useState(shoe.title);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -44,6 +47,8 @@ const EditProduct = () => {
               type="text"
               name="title"
               placeholder="Title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
             />
           </div>
           <div className="mt-2">
