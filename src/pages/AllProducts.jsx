@@ -10,12 +10,20 @@ const AllProducts = () => {
       .then((data) => setShoes(data));
   }, []);
 
+  const handleDeleteProduct = (id) => {
+    setShoes(shoes.filter((shoe) => shoe.id !== id));
+  };
+
   return (
     <div>
       <h1 className="text-5xl font-bold text-center">All Products</h1>
       <div className="my-16 flex justify-center flex-wrap gap-4">
         {shoes.map((shoe) => (
-          <SingleProductDashboard key={shoe.id} shoe={shoe} />
+          <SingleProductDashboard
+            key={shoe.id}
+            shoe={shoe}
+            onDelete={handleDeleteProduct}
+          />
         ))}
       </div>
     </div>

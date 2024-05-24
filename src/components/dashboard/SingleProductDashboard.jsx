@@ -2,7 +2,7 @@
 
 import { Link } from "react-router-dom";
 
-const SingleProductDashboard = ({ shoe }) => {
+const SingleProductDashboard = ({ shoe, onDelete }) => {
   const { id, title, brand, price, description } = shoe;
 
   const handleDelete = async () => {
@@ -11,6 +11,7 @@ const SingleProductDashboard = ({ shoe }) => {
     });
     const data = await res.json();
     console.log(data);
+    onDelete(id);
   };
 
   return (
