@@ -109,7 +109,7 @@ const EditProduct = () => {
             <input
               className="btn mt-4 w-full bg-red-500 text-white p-4"
               type="submit"
-              value="Add product"
+              value="Update Product"
             />
           </div>
         </form>
