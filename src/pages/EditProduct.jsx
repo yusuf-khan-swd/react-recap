@@ -95,20 +95,6 @@ const EditProduct = () => {
 
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Description</span>
-              </label>
-              <textarea
-                type="text"
-                name="description"
-                placeholder="Description"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-                className="textarea textarea-bordered p-2"
-                rows={6}
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
                 <span className="label-text">Image URL</span>
               </label>
               <input
@@ -132,6 +118,20 @@ const EditProduct = () => {
                 value={id}
                 onChange={(e) => setId(e.target.value)}
                 className="input input-bordered"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Description</span>
+              </label>
+              <textarea
+                type="text"
+                name="description"
+                placeholder="Description"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                className="textarea textarea-bordered p-2"
+                rows={6}
               />
             </div>
             <div className="mt-2 flex justify-center items-center">
