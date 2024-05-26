@@ -92,6 +92,7 @@ const EditProduct = () => {
               className="input input-bordered"
             />
           </div>
+          {/* Make it textarea */}
           <div className="form-control">
             <label className="label">
               <span className="label-text">Description</span>
@@ -116,6 +117,7 @@ const EditProduct = () => {
               onChange={(e) => setImageURL(e.target.value)}
             />
           </div>
+          {/* Move it to top */}
           <div className="mt-2">
             <input
               className="bg-gray-100 p-4 w-full border border-black rounded-lg"
