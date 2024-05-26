@@ -92,7 +92,7 @@ const EditProduct = () => {
                 className="input input-bordered"
               />
             </div>
-            {/* Make it textarea */}
+
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Description</span>
