@@ -85,7 +85,7 @@ const AddProducts = () => {
           <div className="mt-2">
             <input
               className="bg-gray-100 p-4 w-full border border-black rounded-lg"
-              type="text"
+              type="number"
               name="id"
               placeholder="ID"
             />
