@@ -79,15 +79,17 @@ const EditProduct = () => {
               className="input input-bordered"
             />
           </div>
-
-          <div className="mt-2">
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Price</span>
+            </label>
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
               type="number"
               name="price"
               placeholder="Price"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
+              className="input input-bordered"
             />
           </div>
           <div className="mt-2">
