@@ -119,18 +119,21 @@ const EditProduct = () => {
               className="input input-bordered"
             />
           </div>
-
           {/* Move it to top */}
-          <div className="mt-2">
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Product ID</span>
+            </label>
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
               type="text"
               name="id"
               placeholder="ID"
               value={id}
               onChange={(e) => setId(e.target.value)}
+              className="input input-bordered"
             />
           </div>
+
           <div className="mt-2 flex justify-center items-center">
             <input
               className="btn mt-4 w-full bg-red-500 text-white p-4"
