@@ -75,7 +75,7 @@ const EditProduct = () => {
               name="brand"
               placeholder="Brand"
               value={brand}
-              onChange={(e) => setTitle(e.target.value)}
+              onChange={(e) => setBrand(e.target.value)}
               className="input input-bordered"
             />
           </div>
