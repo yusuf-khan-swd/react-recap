@@ -106,17 +106,20 @@ const EditProduct = () => {
               className="input input-bordered"
             />
           </div>
-
-          <div className="mt-2">
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Image URL</span>
+            </label>
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
               type="text"
               name="image_url"
               placeholder="Image URL"
               value={image_url}
               onChange={(e) => setImageURL(e.target.value)}
+              className="input input-bordered"
             />
           </div>
+
           {/* Move it to top */}
           <div className="mt-2">
             <input
