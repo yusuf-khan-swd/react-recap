@@ -14,29 +14,33 @@ const EditProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const form = e.target;
+    const proceedToUpdate = confirm("Are sure you want to update this item");
 
-    const id = form?.id.value;
-    const title = form?.title.value;
-    const brand = form?.brand.value;
-    const price = form?.price.value;
-    const description = form?.description.value;
-    const image_url = form?.image_url.value;
+    if (proceedToUpdate) {
+      const form = e.target;
 
-    const data = { id, title, brand, price, description, image_url };
+      const id = form?.id.value;
+      const title = form?.title.value;
+      const brand = form?.brand.value;
+      const price = form?.price.value;
+      const description = form?.description.value;
+      const image_url = form?.image_url.value;
 
-    const res = await fetch(`http://localhost:3000/shoes/${shoe?.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+      const data = { id, title, brand, price, description, image_url };
 
-    const resData = await res.json();
-    console.log(resData);
+      const res = await fetch(`http://localhost:3000/shoes/${shoe?.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    form.reset();
+      const resData = await res.json();
+      console.log(resData);
+
+      form.reset();
+    }
   };
 
   return (
