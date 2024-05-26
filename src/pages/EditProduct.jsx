@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 
 const EditProduct = () => {
@@ -37,7 +38,10 @@ const EditProduct = () => {
       });
 
       const resData = await res.json();
-      console.log(resData);
+
+      if (resData) {
+        toast.success("Product updated successfully");
+      }
 
       form.reset();
     }
