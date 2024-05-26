@@ -6,7 +6,7 @@ const DashboardLayout = () => {
       <div className="col-span-2 bg-gray-300 min-h-screen p-12">
         <ul>
           <li className="border border-black p-4 text w-full">
-            <Link to={"home"}>
+            <Link to={"/dashboard"}>
               <button className="btn w-full">Dashboard</button>
             </Link>
           </li>
