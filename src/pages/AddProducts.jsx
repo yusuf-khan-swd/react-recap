@@ -2,29 +2,33 @@ const AddProducts = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const form = e.target;
+    const proceedToAdd = confirm("Are sure you want to add this item");
 
-    const id = form?.id.value;
-    const title = form?.title.value;
-    const brand = form?.brand.value;
-    const price = form?.price.value;
-    const description = form?.description.value;
-    const image_url = form?.image_url.value;
+    if (proceedToAdd) {
+      const form = e.target;
 
-    const data = { id, title, brand, price, description, image_url };
+      const id = form?.id.value;
+      const title = form?.title.value;
+      const brand = form?.brand.value;
+      const price = form?.price.value;
+      const description = form?.description.value;
+      const image_url = form?.image_url.value;
 
-    const res = await fetch("http://localhost:3000/shoes", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+      const data = { id, title, brand, price, description, image_url };
 
-    const resData = await res.json();
-    console.log(resData);
+      const res = await fetch("http://localhost:3000/shoes", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    form.reset();
+      const resData = await res.json();
+      console.log(resData);
+
+      form.reset();
+    }
   };
 
   return (
