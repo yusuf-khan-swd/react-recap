@@ -55,6 +55,19 @@ const EditProduct = () => {
           <form onSubmit={handleSubmit}>
             <div className="form-control">
               <label className="label">
+                <span className="label-text">Product ID</span>
+              </label>
+              <input
+                type="number"
+                name="id"
+                placeholder="ID"
+                value={id}
+                onChange={(e) => setId(e.target.value)}
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
                 <span className="label-text">Title</span>
               </label>
               <input
@@ -106,20 +119,7 @@ const EditProduct = () => {
                 className="input input-bordered"
               />
             </div>
-            {/* Move it to top */}
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Product ID</span>
-              </label>
-              <input
-                type="number"
-                name="id"
-                placeholder="ID"
-                value={id}
-                onChange={(e) => setId(e.target.value)}
-                className="input input-bordered"
-              />
-            </div>
+
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Description</span>
