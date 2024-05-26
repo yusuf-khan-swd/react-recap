@@ -61,9 +61,22 @@ const EditProduct = () => {
               type="text"
               name="title"
               placeholder="Title"
-              className="input input-bordered"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
+              className="input input-bordered"
+            />
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Brand</span>
+            </label>
+            <input
+              type="text"
+              name="brand"
+              placeholder="Brand"
+              value={brand}
+              onChange={(e) => setTitle(e.target.value)}
+              className="input input-bordered"
             />
           </div>
 
