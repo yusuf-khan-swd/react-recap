@@ -83,16 +83,6 @@ const EditProduct = () => {
           <div className="mt-2">
             <input
               className="bg-gray-100 p-4 w-full border border-black rounded-lg"
-              type="text"
-              name="brand"
-              placeholder="Brand"
-              value={brand}
-              onChange={(e) => setBrand(e.target.value)}
-            />
-          </div>
-          <div className="mt-2">
-            <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
               type="number"
               name="price"
               placeholder="Price"
