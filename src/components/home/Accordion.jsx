@@ -61,28 +61,42 @@ const Accordion = () => {
       </div>
       <div className="collapse collapse-arrow bg-base-200 mb-4">
         <input type="checkbox" className="peer" />
-        <div className="collapse-title text-xl font-medium">Size Guide</div>
+        <div className="collapse-title text-xl font-medium">
+          Returns & Exchanges
+        </div>
         <div className="collapse-content">
-          <p>
-            Ensure you get the perfect fit with our comprehensive size guide.
-            Measure your feet accurately to find the right size for you.
+          <p className="my-5">
+            We want you to be completely satisfied with your purchase. If
+            you&apos;re not, you can easily return or exchange your shoes.
           </p>
-          <p className="font-semibold my-5">How to Measure:</p>
-          <ol className="list-decimal list-inside">
-            <li className="mb-2">Place your foot on a piece of paper.</li>
-            <li className="mb-2">
-              Mark the end of your heel and the tip of your longest toe.
-            </li>
-            <li className="mb-2">
-              Measure the distance between the two marks.
-            </li>
-            <li className="mb-2">Refer to our size chart to find your size.</li>
-          </ol>
-          <p className="font-semibold my-5">Size Chart:</p>
           <ul className="list-disc list-inside">
-            <li className="mb-2">US Sizes: 5, 6, 7, 8, 9, 10, 11, 12</li>
-            <li className="mb-2">UK Sizes: 4, 5, 6, 7, 8, 9, 10, 11</li>
-            <li className="mb-2">EU Sizes: 37, 38, 39, 40, 41, 42, 43, 44</li>
+            <li className="mb-2">
+              Returns accepted within 30 days of purchase.
+            </li>
+            <li className="mb-2">
+              Shoes must be in original condition and packaging.
+            </li>
+          </ul>
+          <p className="font-semibold my-5">How to Return:</p>
+          <ol className="list-decimal list-inside">
+            <li className="mb-2">
+              Fill out the return form included with your order.
+            </li>
+            <li className="mb-2">
+              Pack the shoes securely in the original packaging.
+            </li>
+            <li className="mb-2">
+              Send the package to: 123 Shoe Lane, Fashion City, FC 12345.
+            </li>
+          </ol>
+          <p className="font-semibold my-5">Exchange Policy:</p>
+          <ul className="list-disc list-inside">
+            <li className="mb-2">
+              Exchanges are subject to stock availability.
+            </li>
+            <li className="mb-2">
+              Contact customer service to initiate an exchange.
+            </li>
           </ul>
         </div>
       </div>
