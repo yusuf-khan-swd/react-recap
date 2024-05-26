@@ -15,12 +15,14 @@ const ProductDetails = () => {
             alt="Shoes"
           />
         </figure>
-        <h1 className="text-5xl text-center font-bold my-2">{title}</h1>
-        <div className="card-body">
-          <h2 className="card-title">{title}</h2>
+        <div className="card-body pt-4">
+          <h2 className="card-title justify-center text-3xl">{title}</h2>
           <h3 className="text-xl font-semibold">Brand: {brand}</h3>
           <h3 className="text-xl font-semibold">Price: ${price}</h3>
-          <p>Description: {description}</p>
+          <p>
+            <span className="text-xl font-semibold">Description:</span>{" "}
+            {description}
+          </p>
         </div>
       </div>
     </div>
