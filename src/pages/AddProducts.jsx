@@ -38,73 +38,90 @@ const AddProducts = () => {
 
   return (
     <div>
-      <h1 className="text-5xl font-bold text-center">Add a Product</h1>
+      <h1 className="text-5xl font-bold text-center mt-4 mb-6">
+        Add a Product
+      </h1>
+      <div className="card shadow-xl bg-base-200">
+        <div className="card-body">
+          <form onSubmit={handleSubmit}>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Product ID</span>
+              </label>
+              <input
+                type="number"
+                name="id"
+                placeholder="ID"
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Title</span>
+              </label>
+              <input
+                type="text"
+                name="title"
+                placeholder="Title"
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Brand</span>
+              </label>
+              <input
+                type="text"
+                name="brand"
+                placeholder="Brand"
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Price</span>
+              </label>
+              <input
+                type="number"
+                name="price"
+                placeholder="Price"
+                className="input input-bordered"
+              />
+            </div>
 
-      <div className="my-16">
-        <form onSubmit={handleSubmit}>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Title</span>
-            </label>
-            <input
-              type="text"
-              name="title"
-              placeholder="Title"
-              className="input input-bordered"
-              required
-            />
-          </div>
-          <div className="mt-2">
-            <input className="bg-gray-100 p-4 w-full border border-black rounded-lg" />
-          </div>
-          <div className="mt-2">
-            <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
-              type="text"
-              name="brand"
-              placeholder="Brand"
-            />
-          </div>
-          <div className="mt-2">
-            <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
-              type="number"
-              name="price"
-              placeholder="Price"
-            />
-          </div>
-          <div className="mt-2">
-            <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
-              type="text"
-              name="description"
-              placeholder="Description"
-            />
-          </div>
-          <div className="mt-2">
-            <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
-              type="text"
-              name="image_url"
-              placeholder="Image URL"
-            />
-          </div>
-          <div className="mt-2">
-            <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
-              type="number"
-              name="id"
-              placeholder="ID"
-            />
-          </div>
-          <div className="mt-2 flex justify-center items-center">
-            <input
-              className="btn mt-4 w-full bg-red-500 text-white p-4"
-              type="submit"
-              value="Add product"
-            />
-          </div>
-        </form>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Image URL</span>
+              </label>
+              <input
+                type="text"
+                name="image_url"
+                placeholder="Image URL"
+                className="input input-bordered"
+              />
+            </div>
+
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Description</span>
+              </label>
+              <textarea
+                type="text"
+                name="description"
+                placeholder="Description"
+                className="textarea textarea-bordered p-2"
+                rows={6}
+              ></textarea>
+            </div>
+            <div className="mt-2 flex justify-center items-center">
+              <input
+                className="btn mt-4 w-full btn-primary text-white p-4"
+                type="submit"
+                value="Add Product"
+              />
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
