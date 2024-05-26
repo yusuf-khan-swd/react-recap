@@ -53,6 +53,19 @@ const EditProduct = () => {
 
       <div className="my-16">
         <form onSubmit={handleSubmit}>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Title</span>
+            </label>
+            <input
+              type="text"
+              name="title"
+              placeholder="Title"
+              className="input input-bordered"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </div>
           <div className="mt-2">
             <input
               className="bg-gray-100 p-4 w-full border border-black rounded-lg"
