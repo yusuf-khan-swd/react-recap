@@ -6,12 +6,16 @@ const SingleProductDashboard = ({ shoe, onDelete }) => {
   const { id, title, brand, price, description } = shoe;
 
   const handleDelete = async () => {
-    const res = await fetch(`http://localhost:3000/shoes/${id}`, {
-      method: "DELETE",
-    });
-    const data = await res.json();
-    console.log(data);
-    onDelete(id);
+    const proceedToDelete = confirm("Are sure you want to delete this item");
+
+    if (proceedToDelete) {
+      const res = await fetch(`http://localhost:3000/shoes/${id}`, {
+        method: "DELETE",
+      });
+      const data = await res.json();
+      console.log(data);
+      onDelete(id);
+    }
   };
 
   return (
