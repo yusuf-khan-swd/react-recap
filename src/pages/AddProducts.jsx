@@ -42,13 +42,20 @@ const AddProducts = () => {
 
       <div className="my-16">
         <form onSubmit={handleSubmit}>
-          <div className="mt-2">
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Title</span>
+            </label>
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
               type="text"
               name="title"
               placeholder="Title"
+              className="input input-bordered"
+              required
             />
+          </div>
+          <div className="mt-2">
+            <input className="bg-gray-100 p-4 w-full border border-black rounded-lg" />
           </div>
           <div className="mt-2">
             <input
