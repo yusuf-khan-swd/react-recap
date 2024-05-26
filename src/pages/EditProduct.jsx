@@ -130,7 +130,7 @@ const EditProduct = () => {
                 placeholder="Description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className="textarea textarea-bordered p-2"
+                className="textarea textarea-bordered"
                 rows={6}
               ></textarea>
             </div>
