@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 const SingleProductDashboard = ({ shoe, onDelete }) => {
@@ -14,6 +15,11 @@ const SingleProductDashboard = ({ shoe, onDelete }) => {
       });
       const data = await res.json();
       console.log(data);
+
+      if (data) {
+        toast.success("Product deleted successfully");
+      }
+
       onDelete(id);
     }
   };
