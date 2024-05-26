@@ -97,13 +97,14 @@ const EditProduct = () => {
               <label className="label">
                 <span className="label-text">Description</span>
               </label>
-              <input
+              <textarea
                 type="text"
                 name="description"
                 placeholder="Description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className="input input-bordered"
+                className="textarea textarea-bordered p-2"
+                rows={6}
               />
             </div>
             <div className="form-control">
