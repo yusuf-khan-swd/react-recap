@@ -6,7 +6,7 @@ const ProductDetails = () => {
   const { brand, description, price, title } = shoe;
 
   return (
-    <div className="flex flex-col items-center my-16">
+    <div className="flex flex-col items-center my-6">
       <div className="card bg-base-100 shadow-xl">
         <figure>
           <img
