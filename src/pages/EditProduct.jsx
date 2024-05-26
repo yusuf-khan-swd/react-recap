@@ -125,7 +125,7 @@ const EditProduct = () => {
                 <span className="label-text">Product ID</span>
               </label>
               <input
-                type="text"
+                type="number"
                 name="id"
                 placeholder="ID"
                 value={id}
