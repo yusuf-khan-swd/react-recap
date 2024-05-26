@@ -132,7 +132,7 @@ const EditProduct = () => {
                 onChange={(e) => setDescription(e.target.value)}
                 className="textarea textarea-bordered p-2"
                 rows={6}
-              />
+              ></textarea>
             </div>
             <div className="mt-2 flex justify-center items-center">
               <input
