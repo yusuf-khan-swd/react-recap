@@ -21,7 +21,7 @@ const DashboardLayout = () => {
           </li>
         </ul>
       </div>
-      <div className="col-span-10 p-20">
+      <div className="col-span-10 p-12">
         <Outlet />
       </div>
     </div>
