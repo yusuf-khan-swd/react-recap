@@ -13,11 +13,14 @@ const SingleProduct = ({ shoe }) => {
           alt="Shoes"
         />
       </figure>
-      <div className="card-body">
-        <h2 className="card-title">{title}</h2>
+      <div className="card-body pt-4">
+        <h2 className="card-title justify-center text-3xl my-2">{title}</h2>
         <h3 className="text-xl font-semibold">Brand: {brand}</h3>
         <h3 className="text-xl font-semibold">Price: ${price}</h3>
-        <p>Description: {description}</p>
+        <p>
+          <span className="text-xl font-semibold">Description:</span>{" "}
+          {description}
+        </p>
         <div className="card-actions justify-end">
           <Link to={`/products/${id}`}>
             <button className="btn btn-primary">See More</button>
