@@ -49,99 +49,99 @@ const EditProduct = () => {
 
   return (
     <div>
-      <h1 className="text-5xl font-bold text-center">Edit Product</h1>
-
-      <div className="my-16">
-        <form onSubmit={handleSubmit}>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Title</span>
-            </label>
-            <input
-              type="text"
-              name="title"
-              placeholder="Title"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              className="input input-bordered"
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Brand</span>
-            </label>
-            <input
-              type="text"
-              name="brand"
-              placeholder="Brand"
-              value={brand}
-              onChange={(e) => setBrand(e.target.value)}
-              className="input input-bordered"
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Price</span>
-            </label>
-            <input
-              type="number"
-              name="price"
-              placeholder="Price"
-              value={price}
-              onChange={(e) => setPrice(e.target.value)}
-              className="input input-bordered"
-            />
-          </div>
-          {/* Make it textarea */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Description</span>
-            </label>
-            <input
-              type="text"
-              name="description"
-              placeholder="Description"
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              className="input input-bordered"
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Image URL</span>
-            </label>
-            <input
-              type="text"
-              name="image_url"
-              placeholder="Image URL"
-              value={image_url}
-              onChange={(e) => setImageURL(e.target.value)}
-              className="input input-bordered"
-            />
-          </div>
-          {/* Move it to top */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Product ID</span>
-            </label>
-            <input
-              type="text"
-              name="id"
-              placeholder="ID"
-              value={id}
-              onChange={(e) => setId(e.target.value)}
-              className="input input-bordered"
-            />
-          </div>
-
-          <div className="mt-2 flex justify-center items-center">
-            <input
-              className="btn mt-4 w-full bg-red-500 text-white p-4"
-              type="submit"
-              value="Update Product"
-            />
-          </div>
-        </form>
+      <h1 className="text-5xl font-bold text-center mt-4 mb-6">Edit Product</h1>
+      <div className="card shadow-xl bg-base-200">
+        <div className="card-body">
+          <form onSubmit={handleSubmit}>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Title</span>
+              </label>
+              <input
+                type="text"
+                name="title"
+                placeholder="Title"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Brand</span>
+              </label>
+              <input
+                type="text"
+                name="brand"
+                placeholder="Brand"
+                value={brand}
+                onChange={(e) => setBrand(e.target.value)}
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Price</span>
+              </label>
+              <input
+                type="number"
+                name="price"
+                placeholder="Price"
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+                className="input input-bordered"
+              />
+            </div>
+            {/* Make it textarea */}
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Description</span>
+              </label>
+              <input
+                type="text"
+                name="description"
+                placeholder="Description"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Image URL</span>
+              </label>
+              <input
+                type="text"
+                name="image_url"
+                placeholder="Image URL"
+                value={image_url}
+                onChange={(e) => setImageURL(e.target.value)}
+                className="input input-bordered"
+              />
+            </div>
+            {/* Move it to top */}
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Product ID</span>
+              </label>
+              <input
+                type="text"
+                name="id"
+                placeholder="ID"
+                value={id}
+                onChange={(e) => setId(e.target.value)}
+                className="input input-bordered"
+              />
+            </div>
+            <div className="mt-2 flex justify-center items-center">
+              <input
+                className="btn mt-4 w-full btn-primary text-white p-4"
+                type="submit"
+                value="Update Product"
+              />
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
