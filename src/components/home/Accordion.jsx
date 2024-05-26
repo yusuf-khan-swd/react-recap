@@ -2,7 +2,7 @@ const Accordion = () => {
   return (
     <div className="mt-16">
       <div className="collapse collapse-arrow bg-base-200 mb-4">
-        <input type="radio" name="my-accordion-2" />
+        <input type="checkbox" className="peer" />
         <div className="collapse-title text-xl font-medium">Size Guide</div>
         <div className="collapse-content">
           <p>
