@@ -8,7 +8,6 @@ const EditProduct = () => {
   const [title, setTitle] = useState(shoe.title);
   const [price, setPrice] = useState(shoe.price);
   const [brand, setBrand] = useState(shoe.brand);
-  const [id, setId] = useState(shoe.id);
   const [description, setDescription] = useState(shoe.description);
   const [image_url, setImageURL] = useState(shoe.image_url);
 
@@ -20,14 +19,13 @@ const EditProduct = () => {
     if (proceedToUpdate) {
       const form = e.target;
 
-      const id = form?.id.value;
       const title = form?.title.value;
       const brand = form?.brand.value;
       const price = form?.price.value;
       const description = form?.description.value;
       const image_url = form?.image_url.value;
 
-      const data = { id, title, brand, price, description, image_url };
+      const data = { title, brand, price, description, image_url };
 
       const res = await fetch(`http://localhost:3000/shoes/${shoe?.id}`, {
         method: "PATCH",
@@ -53,19 +51,6 @@ const EditProduct = () => {
       <div className="card shadow-xl bg-base-200">
         <div className="card-body">
           <form onSubmit={handleSubmit}>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Product ID</span>
-              </label>
-              <input
-                type="number"
-                name="id"
-                placeholder="ID"
-                value={id}
-                onChange={(e) => setId(e.target.value)}
-                className="input input-bordered"
-              />
-            </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Title</span>
