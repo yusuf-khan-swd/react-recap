@@ -11,7 +11,7 @@ const AllProducts = () => {
   }, []);
 
   const handleDeleteProduct = (id) => {
-    setProducts(products.filter((product) => product.id !== id));
+    setProducts(products.filter((product) => product._id !== id));
   };
 
   return (
