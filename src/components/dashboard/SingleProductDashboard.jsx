@@ -10,7 +10,7 @@ const SingleProductDashboard = ({ shoe, onDelete }) => {
     const proceedToDelete = confirm("Are sure you want to delete this item");
 
     if (proceedToDelete) {
-      const res = await fetch(`http://localhost:3000/shoes/${_id}`, {
+      const res = await fetch(`http://localhost:5000/shoes/${_id}`, {
         method: "DELETE",
       });
       const data = await res.json();
