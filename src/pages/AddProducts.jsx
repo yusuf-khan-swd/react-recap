@@ -18,7 +18,7 @@ const AddProducts = () => {
 
       const data = { id, title, brand, price, description, image_url };
 
-      const res = await fetch("http://localhost:3000/shoes", {
+      const res = await fetch("http://localhost:5000/shoes", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
