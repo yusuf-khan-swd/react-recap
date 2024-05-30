@@ -9,14 +9,13 @@ const AddProducts = () => {
     if (proceedToAdd) {
       const form = e.target;
 
-      const id = form?.id.value;
       const title = form?.title.value;
       const brand = form?.brand.value;
       const price = form?.price.value;
       const description = form?.description.value;
       const image_url = form?.image_url.value;
 
-      const data = { id, title, brand, price, description, image_url };
+      const data = { title, brand, price, description, image_url };
 
       const res = await fetch("http://localhost:5000/shoes", {
         method: "POST",
@@ -44,17 +43,6 @@ const AddProducts = () => {
       <div className="card shadow-xl bg-base-200">
         <div className="card-body">
           <form onSubmit={handleSubmit}>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Product ID</span>
-              </label>
-              <input
-                type="number"
-                name="id"
-                placeholder="ID"
-                className="input input-bordered"
-              />
-            </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Title</span>
