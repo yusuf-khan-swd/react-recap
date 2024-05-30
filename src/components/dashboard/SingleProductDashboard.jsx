@@ -4,13 +4,13 @@ import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 const SingleProductDashboard = ({ shoe, onDelete }) => {
-  const { id, title, brand, price, description } = shoe;
+  const { _id, title, brand, price, description } = shoe;
 
   const handleDelete = async () => {
     const proceedToDelete = confirm("Are sure you want to delete this item");
 
     if (proceedToDelete) {
-      const res = await fetch(`http://localhost:3000/shoes/${id}`, {
+      const res = await fetch(`http://localhost:3000/shoes/${_id}`, {
         method: "DELETE",
       });
       const data = await res.json();
@@ -20,7 +20,7 @@ const SingleProductDashboard = ({ shoe, onDelete }) => {
         toast.success("Product deleted successfully");
       }
 
-      onDelete(id);
+      onDelete(_id);
     }
   };
 
@@ -39,10 +39,10 @@ const SingleProductDashboard = ({ shoe, onDelete }) => {
         <p>Description: {description}</p>
         <div className="card-actions justify-end">
           <button className="btn bg-indigo-500 text-white">
-            <Link to={`/products/${id}`}>See details</Link>
+            <Link to={`/products/${_id}`}>See details</Link>
           </button>
           <button className="btn bg-green-600 text-white">
-            <Link to={`edit/${id}`}>Edit</Link>
+            <Link to={`edit/${_id}`}>Edit</Link>
           </button>
           <button onClick={handleDelete} className="btn bg-red-500 text-white">
             Delete
