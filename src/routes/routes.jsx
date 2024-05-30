@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
         path: "/products/:id",
         element: <ProductDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/shoes/${params?.id}`),
+          fetch(`http://localhost:5000/shoes/${params?.id}`),
       },
       {
         path: "/login",
