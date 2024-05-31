@@ -5,6 +5,8 @@ import { useLoaderData } from "react-router-dom";
 const EditProduct = () => {
   const shoe = useLoaderData();
 
+  const token = localStorage.getItem("token");
+
   const [title, setTitle] = useState(shoe.title);
   const [price, setPrice] = useState(shoe.price);
   const [brand, setBrand] = useState(shoe.brand);
@@ -31,6 +33,7 @@ const EditProduct = () => {
         method: "PATCH",
         headers: {
           "Content-type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(data),
       });
