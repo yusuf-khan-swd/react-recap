@@ -13,7 +13,7 @@ const Registration = () => {
 
   const from = location?.state?.from?.pathname || "/";
 
-  const handleSUbmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     const form = e.target;
@@ -53,7 +53,7 @@ const Registration = () => {
   }, [user, navigate, from]);
 
   return (
-    <form onSubmit={handleSUbmit} className="hero min-h-screen bg-base-200">
+    <form onSubmit={handleSubmit} className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse max-w-[1040px] mx-auto">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Register now!</h1>
