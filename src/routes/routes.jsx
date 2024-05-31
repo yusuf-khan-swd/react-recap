@@ -6,6 +6,7 @@ import AddProducts from "../pages/AddProducts";
 import AllProducts from "../pages/AllProducts";
 import Dashboard from "../pages/Dashboard";
 import EditProduct from "../pages/EditProduct";
+import EditProfile from "../pages/EditProfile";
 import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
@@ -54,6 +55,14 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Dashboard />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "profile/edit/:id",
+        element: (
+          <PrivateRoute>
+            <EditProfile />
           </PrivateRoute>
         ),
       },
