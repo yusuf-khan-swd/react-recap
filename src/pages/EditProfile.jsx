@@ -53,6 +53,7 @@ const EditProfile = () => {
                 className="input input-bordered"
                 value={userInfo?.email}
                 required
+                disabled
               />
             </div>
             <div className="form-control mt-6">
