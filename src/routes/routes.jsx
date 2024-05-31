@@ -65,6 +65,8 @@ export const router = createBrowserRouter([
             <EditProfile />
           </PrivateRoute>
         ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/user/profile/${params?.id}`),
       },
       {
         path: "all-products",
