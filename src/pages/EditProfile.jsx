@@ -10,9 +10,10 @@ const EditProfile = () => {
     const form = e.target;
     const name = form.name.value;
     const email = userInfo?.email;
-    const number = form.name.value;
+    const number = form.number.value;
 
     const user = { email, name, number };
+    console.log(user);
 
     fetch(`http://localhost:5000/user/profile/${userInfo?._id}`, {
       method: "PATCH",
