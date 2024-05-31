@@ -17,6 +17,7 @@ const Registration = () => {
     e.preventDefault();
 
     const form = e.target;
+    const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
     const confirm_password = form.confirm_password.value;
@@ -28,7 +29,22 @@ const Registration = () => {
     console.log(email, password, confirm_password);
 
     if (password === confirm_password) {
-      createUser(email, password);
+      createUser(email, password).then((data) => {
+        if (data?.user?.email) {
+          const email = data?.user?.email;
+          const user = { email, name };
+
+          fetch("http://localhost:5000/user", {
+            method: "POST",
+            headers: {
+              "Content-type": "application/json",
+            },
+            body: JSON.stringify(user),
+          })
+            .then((res) => res.json())
+            .then((data) => console.log(data));
+        }
+      });
     }
   };
 
