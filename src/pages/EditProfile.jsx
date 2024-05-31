@@ -10,7 +10,7 @@ const EditProfile = () => {
     const form = e.target;
     const name = form.name.value;
     const email = userInfo?.email;
-    const number = userInfo?.number;
+    const number = form.name.value;
 
     const user = { email, name, number };
 
