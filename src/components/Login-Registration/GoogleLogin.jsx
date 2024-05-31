@@ -16,7 +16,9 @@ const GoogleLogin = () => {
           "Content-type": "application/json",
         },
         body: JSON.stringify(user),
-      }).then((data) => console.log(data));
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
     });
   };
 
