@@ -5,7 +5,19 @@ const GoogleLogin = () => {
   const { googleLogin } = useAuth();
 
   const handleGoogleSignIn = () => {
-    googleLogin();
+    googleLogin().then((data) => {
+      const email = data?.user?.email;
+      const name = data?.user?.displayName;
+      const user = { email, name };
+
+      fetch("http://localhost:5000/user", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(user),
+      }).then((data) => console.log(data));
+    });
   };
 
   return (
