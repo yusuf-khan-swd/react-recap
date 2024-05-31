@@ -6,19 +6,21 @@ const GoogleLogin = () => {
 
   const handleGoogleSignIn = () => {
     googleLogin().then((data) => {
-      const email = data?.user?.email;
-      const name = data?.user?.displayName;
-      const user = { email, name };
+      if (data?.user?.email) {
+        const email = data?.user?.email;
+        const name = data?.user?.displayName;
+        const user = { email, name };
 
-      fetch("http://localhost:5000/user", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(user),
-      })
-        .then((res) => res.json())
-        .then((data) => console.log(data));
+        fetch("http://localhost:5000/user", {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify(user),
+        })
+          .then((res) => res.json())
+          .then((data) => console.log(data));
+      }
     });
   };
 
