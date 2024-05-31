@@ -1,9 +1,23 @@
+import { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 
 const Dashboard = () => {
   const { logout, user } = useAuth();
 
+  const [userInfo, setUserInfo] = useState({});
+
   const { displayName, email } = user;
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/user/${user?.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setUserInfo(data);
+      });
+  }, [user]);
+
+  console.log(userInfo);
 
   const handleLogout = async () => {
     await logout();
