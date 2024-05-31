@@ -51,6 +51,18 @@ const Registration = () => {
           <div className="card-body">
             <div className="form-control">
               <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+              <input
+                type="text"
+                placeholder="name"
+                className="input input-bordered"
+                name="name"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
                 <span className="label-text">Email</span>
               </label>
               <input
