@@ -28,18 +28,6 @@ const Dashboard = () => {
           <form className="card-body">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="email"
-                placeholder="email"
-                className="input input-bordered"
-                value={userInfo?.email}
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
                 <span className="label-text">Name</span>
               </label>
               <input
@@ -47,6 +35,18 @@ const Dashboard = () => {
                 placeholder="Name"
                 className="input input-bordered"
                 value={userInfo?.name}
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Email</span>
+              </label>
+              <input
+                type="email"
+                placeholder="email"
+                className="input input-bordered"
+                value={userInfo?.email}
                 required
               />
             </div>
