@@ -10,8 +10,9 @@ const EditProfile = () => {
     const form = e.target;
     const name = form.name.value;
     const email = userInfo?.email;
+    const number = userInfo?.number;
 
-    const user = { email, name };
+    const user = { email, name, number };
 
     fetch(`http://localhost:5000/user/profile/${userInfo?._id}`, {
       method: "PATCH",
@@ -56,6 +57,18 @@ const EditProfile = () => {
                 name="email"
                 required
                 disabled
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Mobile Number</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Mobile"
+                className="input input-bordered"
+                defaultValue={userInfo?.number}
+                name="number"
               />
             </div>
             <div className="form-control mt-6">
