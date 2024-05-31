@@ -40,6 +40,7 @@ const EditProfile = () => {
                 placeholder="Name"
                 className="input input-bordered"
                 defaultValue={userInfo?.name}
+                name="name"
                 required
               />
             </div>
@@ -52,6 +53,7 @@ const EditProfile = () => {
                 placeholder="email"
                 className="input input-bordered"
                 value={userInfo?.email}
+                name="email"
                 required
                 disabled
               />
