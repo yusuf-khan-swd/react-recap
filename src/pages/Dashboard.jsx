@@ -6,8 +6,6 @@ const Dashboard = () => {
 
   const [userInfo, setUserInfo] = useState({});
 
-  const { displayName, email } = user;
-
   useEffect(() => {
     fetch(`http://localhost:5000/user/${user?.email}`)
       .then((res) => res.json())
@@ -36,7 +34,7 @@ const Dashboard = () => {
                 type="email"
                 placeholder="email"
                 className="input input-bordered"
-                value={email}
+                value={userInfo?.email}
                 required
               />
             </div>
@@ -48,7 +46,7 @@ const Dashboard = () => {
                 type="text"
                 placeholder="Name"
                 className="input input-bordered"
-                value={displayName}
+                value={userInfo?.name}
                 required
               />
             </div>
